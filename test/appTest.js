@@ -7,6 +7,7 @@ const app = require('../app')
 let sayHelloResult = app.sayHello()
 let addNumbersResult = app.addNumbers(5, 5)
 let reverseWordResult = app.reverseWord('walter')
+let smallerNumberResult = app.smallerNumber(5, 8)
 
 describe('App', function() {
   describe('sayHello()', function() {
@@ -27,6 +28,11 @@ describe('App', function() {
     it('addNumber should return type number', function() {
       // let result = app.addNumbers(5, 5)
       assert.typeOf(addNumbersResult, 'number')
+    })
+  })
+  describe('smallerNumber()', function() {
+    it('smallerNumber should return the smaller of the two numbers', function() {
+      assert.equal(smallerNumberResult, 5)
     })
   })
   describe('reverseWord()', function() {
